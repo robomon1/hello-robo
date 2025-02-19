@@ -7,12 +7,15 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
             background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
         }
         h1 {
             font-size: 48px;
@@ -22,14 +25,69 @@
             border-radius: 10px;
             background: white;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: inline-block;
             transition: transform 0.3s ease;
         }
         h1:hover {
             transform: scale(1.05);
         }
+        .welcome-message {
+            font-size: 24px;
+            color: #34495e;
+            margin: 30px 0;
+        }
+        .robot-info {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 20px 0;
+        }
+        .interactive-section {
+            margin: 30px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Hello robo</h1>
+    <div class="container">
+        <h1>Hello robo</h1>
+        
+        <div class="welcome-message">
+            Welcome to the fascinating world of robotics!
+        </div>
+        
+        <div class="robot-info">
+            <h2>About Robots</h2>
+            <p>Robots are mechanical or virtual agents, usually an electro-mechanical machine guided by computer or electronic programming, that can perform tasks automatically.</p>
+        </div>
+        
+        <div class="interactive-section">
+            <button onclick="alert('Beep boop! 🤖')">Click me!</button>
+        </div>
+        
+        <footer>
+            <p>Created with ❤️ by robo enthusiasts</p>
+            <p>Learn more about robotics and artificial intelligence</p>
+        </footer>
+    </div>
 </body>
 </html>
